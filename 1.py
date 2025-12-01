@@ -1,9 +1,8 @@
 target = input('目标')
 arn = list(input('').strip())
 
-print(target, arn)
-
-for i in range(len(arn)-1):
-    if arn[i] + arn[i+1] == target:
-        print(index(arn[i]), arn[i+1])
-        break
+for i in range(len(arn)):
+    for j in range(i+1, len(arn)):
+        if int(arn[i]) + int(arn[j]) == int(target):
+            print(i, j)
+            break
